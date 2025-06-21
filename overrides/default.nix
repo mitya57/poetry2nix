@@ -3374,7 +3374,35 @@ lib.composeManyExtensions [
           #       echo "\"${version#v}\" = \"$(echo "$nix_prefetch" | jq -r ".sha256 // .hash")\";"
           #     done' _
           getRepoHash = version: {
+            "0.11.13" = "sha256-qa4TCvjk0zrXRdiTTqjJbUnCXQKpwiRwtA28y8ZuGpw=";
+            "0.11.12" = "sha256-5oLMhP4PKzZTp0ab+Fitq97GAVLV/GJmR2JH9IXlfuU=";
+            "0.11.11" = "sha256-PPryfsdge0kOb7RyEkGl7c3pFucRzt0+9tACet3nDGM=";
+            "0.11.10" = "sha256-8psRFBhOzcFYYOU1aLf2tQwSZeWyn3TjUtfMR8HJ4FE=";
+            "0.11.9" = "sha256-TJHBaru0L2pMdZ9omtJ+OqGP764fSwoP54xndWVV6ls=";
+            "0.11.8" = "sha256-HVZADn9xpwywubEbaMJgOs3yCXa4pNWnnrfSICF2+DE=";
+            "0.11.7" = "sha256-DXu9/DRwcffZtsql/Qk+6GyzhiYXUyW6R9FCAvLhn6o=";
+            "0.11.6" = "sha256-Yi8eRA2xL+wumXXrq5c4NNtPORZ3BjEM5IowDEfsjwA=";
+            "0.11.5" = "sha256-7R913Dt395qsyJCp7eXGQ9BcAAvV7GrJqoZAsXn6CTs=";
+            "0.11.4" = "sha256-6Nfnn8VOT0VBPxrMQJAsFt+FrR/rYbh6pyEsW8Ca43s=";
+            "0.11.3" = "sha256-5kUoriAT9PqcEYK3jMm58jBcWwsVA1rU9juivE1jnvI=";
+            "0.11.2" = "sha256-/K6+zze5d0RAE7/Nalnmx9qKHI1rPDeh3OkTatgP5Q4=";
+            "0.11.1" = "sha256-uouy47Lzrrht3wBUiQePW7x6QJfpIce9ny/p6HNwCNY=";
+            "0.11.0" = "sha256-/CVpNBOBpvQhz7X80nUHC2x7ZxxCJH8O0WAABJKEriA=";
+            "0.10.0" = "sha256-/xeyJCK1E0KJF7f+HBuL8tz2mcNVS3rNf2tm2gTVVys=";
+            "0.9.10" = "sha256-z1Lx/1RxGEjxIodg/J5aFIvCVYImU3S5xf+Pooj5oA0=";
+            "0.9.9" = "sha256-SPthKFnUdBZwcLZm5EWmjskgdpO1+Llr6QEi8+a1cY0=";
+            "0.9.8" = "sha256-vsbsKxG2iOu6Pa1PmCGXa2zcYJmIHInnguiiLdW8bK8=";
+            "0.9.7" = "sha256-eUQ4YBaQvSHbPjETC1rdpCm8WzJYkJXLnaPThrBvgj0=";
+            "0.9.6" = "sha256-xKlvj+8ox5UdkH3s9IOIMOVPCDQMLnGUKDOhKAZZgg4=";
+            "0.9.5" = "sha256-VoYV13GsTaAWoLcSfuadLR2l8Xbn0MEd/Uh9EP/DgjE=";
+            "0.9.4" = "sha256-HUCquxp8U6ZoHNSuUSu56EyiaSRRA8qUMYu6nNibt6w=";
+            "0.9.3" = "sha256-V05GUo5nA6RhVWD7mn94GF3/93In3cnljd2G3hPeBZ0=";
+            "0.9.2" = "sha256-DKDSjiN7Ve/1mHWXoYOIdJ67MRoJYDR59VuVmfwYJHs=";
+            "0.9.1" = "sha256-QLg86MDeIykILChyYaOPUEV2hZmeJkIPztNW5t+StFE=";
+            "0.9.0" = "sha256-OAhjatPzwvLT3HyXYPzaL5pAC5CH75CyMmFo0c4726I=";
             "0.8.6" = "sha256-9YvHmNiKdf5hKqy9tToFSQZM2DNLoIiChcfjQay8wbU=";
+            "0.8.5" = "sha256-Y6J7hW+VYePhKH+5YXfuGuVB0WjYjUg8mM3kQBUnv/U=";
+            "0.8.4" = "sha256-c5d2XaoEjCHWMdjTLD6CnwP8rpSXTUrmKSs0QWQ6UG0=";
             "0.7.4" = "sha256-viDjUfj/OWYU7Fa7mqD2gYoirKFSaTXPPi0iS7ibiiU=";
             "0.7.3" = "sha256-TQ7nBd2S77VYShYxpxZ3CfCMiOGyl9EtIv9nXZjmijc=";
             "0.7.2" = "sha256-9zbLlQfDeqdUp1AKP/NRMZl9KeTyyTJz7JZVW/GGRM0=";
@@ -3464,6 +3492,240 @@ lib.composeManyExtensions [
           );
 
           getCargoHash = version: {
+            "0.11.13" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.11.13/Cargo.lock
+              lockFile = ./ruff/0.11.13-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.22.0" = "sha256-UCXSL5fJ+AB+uaiZv5P/9StSUuKcoN4Toz6tL6qCXPE=";
+              };
+            };
+            "0.11.12" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.11.12/Cargo.lock
+              lockFile = ./ruff/0.11.12-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.21.1" = "sha256-hE9V+21V3JM8nphhIN9hO9x4/bms8ghKLyGjaQbxs2g=";
+              };
+            };
+            "0.11.11" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.11.11/Cargo.lock
+              lockFile = ./ruff/0.11.11-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.21.1" = "sha256-hE9V+21V3JM8nphhIN9hO9x4/bms8ghKLyGjaQbxs2g=";
+              };
+            };
+            "0.11.10" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.11.10/Cargo.lock
+              lockFile = ./ruff/0.11.10-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.21.1" = "sha256-hnPb4jvaA9wCZqHMkhNL7nC8xcqxkPTJUm3N1mrH6K8=";
+              };
+            };
+            "0.11.9" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.11.9/Cargo.lock
+              lockFile = ./ruff/0.11.9-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.21.1" = "sha256-hnPb4jvaA9wCZqHMkhNL7nC8xcqxkPTJUm3N1mrH6K8=";
+              };
+            };
+            "0.11.8" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.11.8/Cargo.lock
+              lockFile = ./ruff/0.11.8-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.21.0" = "sha256-aJcCxkGA9uv5sPkHT22YWT5eyDNefrOJa5upYTQBwx8=";
+              };
+            };
+            "0.11.7" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.11.7/Cargo.lock
+              lockFile = ./ruff/0.11.7-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.19.0" = "sha256-4t0Te4JBrIJ1PV26I+57yu/4RBPJX+2SM6SCuCgBAo0=";
+              };
+            };
+            "0.11.6" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.11.6/Cargo.lock
+              lockFile = ./ruff/0.11.6-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.19.0" = "sha256-4t0Te4JBrIJ1PV26I+57yu/4RBPJX+2SM6SCuCgBAo0=";
+              };
+            };
+            "0.11.5" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.11.5/Cargo.lock
+              lockFile = ./ruff/0.11.5-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.19.0" = "sha256-4t0Te4JBrIJ1PV26I+57yu/4RBPJX+2SM6SCuCgBAo0=";
+              };
+            };
+            "0.11.4" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.11.4/Cargo.lock
+              lockFile = ./ruff/0.11.4-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.19.0" = "sha256-7CUUShVa4CWIx+Qoo8XenYDMcppDmNa0XfUD9hTcHac=";
+              };
+            };
+            "0.11.3" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.11.3/Cargo.lock
+              lockFile = ./ruff/0.11.3-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.19.0" = "sha256-d0HSoEMnZl9wgCYnfJk6ssUni32fxdXCt5Vh6bOYDnY=";
+              };
+            };
+            "0.11.2" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.11.2/Cargo.lock
+              lockFile = ./ruff/0.11.2-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.19.0" = "sha256-d0HSoEMnZl9wgCYnfJk6ssUni32fxdXCt5Vh6bOYDnY=";
+              };
+            };
+            "0.11.1" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.11.1/Cargo.lock
+              lockFile = ./ruff/0.11.1-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.19.0" = "sha256-d0HSoEMnZl9wgCYnfJk6ssUni32fxdXCt5Vh6bOYDnY=";
+              };
+            };
+            "0.11.0" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.11.0/Cargo.lock
+              lockFile = ./ruff/0.11.0-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.19.0" = "sha256-JOAmwYRwHMsRWljsZbSCoSekXJ5pyPDC8Kdz/S57qG0=";
+              };
+            };
+            "0.10.0" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.10.0/Cargo.lock
+              lockFile = ./ruff/0.10.0-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.19.0" = "sha256-JOAmwYRwHMsRWljsZbSCoSekXJ5pyPDC8Kdz/S57qG0=";
+              };
+            };
+            "0.9.10" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.9.10/Cargo.lock
+              lockFile = ./ruff/0.9.10-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.18.0" = "sha256-2hJNQpvQrGgPHqOK7QXffMWxYjzHKpxoDFits66Rz+E=";
+              };
+            };
+            "0.9.9" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.9.9/Cargo.lock
+              lockFile = ./ruff/0.9.9-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.18.0" = "sha256-2hJNQpvQrGgPHqOK7QXffMWxYjzHKpxoDFits66Rz+E=";
+              };
+            };
+            "0.9.8" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.9.8/Cargo.lock
+              lockFile = ./ruff/0.9.8-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.18.0" = "sha256-2hJNQpvQrGgPHqOK7QXffMWxYjzHKpxoDFits66Rz+E=";
+              };
+            };
+            "0.9.7" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.9.7/Cargo.lock
+              lockFile = ./ruff/0.9.7-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.18.0" = "sha256-7ZHfoWfU/XKlo3hhQAP7BE1MNRhbMmdn6AwxGQ5sn4I=";
+              };
+            };
+            "0.9.6" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.9.6/Cargo.lock
+              lockFile = ./ruff/0.9.6-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.18.0" = "sha256-esWNyc3TcIhFul4VjtZH991aZp03BUVgvzCFqt6GtUg=";
+              };
+            };
+            "0.9.5" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.9.5/Cargo.lock
+              lockFile = ./ruff/0.9.5-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.18.0" = "sha256-esWNyc3TcIhFul4VjtZH991aZp03BUVgvzCFqt6GtUg=";
+              };
+            };
+            "0.9.4" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.9.4/Cargo.lock
+              lockFile = ./ruff/0.9.4-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.18.0" = "sha256-esWNyc3TcIhFul4VjtZH991aZp03BUVgvzCFqt6GtUg=";
+              };
+            };
+            "0.9.3" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.9.3/Cargo.lock
+              lockFile = ./ruff/0.9.3-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.18.0" = "sha256-esWNyc3TcIhFul4VjtZH991aZp03BUVgvzCFqt6GtUg=";
+              };
+            };
+            "0.9.2" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.9.2/Cargo.lock
+              lockFile = ./ruff/0.9.2-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.18.0" = "sha256-esWNyc3TcIhFul4VjtZH991aZp03BUVgvzCFqt6GtUg=";
+              };
+            };
+            "0.9.1" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.9.1/Cargo.lock
+              lockFile = ./ruff/0.9.1-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.18.0" = "sha256-esWNyc3TcIhFul4VjtZH991aZp03BUVgvzCFqt6GtUg=";
+              };
+            };
+            "0.9.0" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.9.0/Cargo.lock
+              lockFile = ./ruff/0.9.0-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.18.0" = "sha256-esWNyc3TcIhFul4VjtZH991aZp03BUVgvzCFqt6GtUg=";
+              };
+            };
             "0.8.6" = {
               # https://raw.githubusercontent.com/astral-sh/ruff/0.8.6/Cargo.lock
               lockFile = ./ruff/0.8.6-Cargo.lock;
@@ -3471,6 +3733,24 @@ lib.composeManyExtensions [
                 "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
                 # lock file has a revision override
                 "salsa-0.18.0" = "sha256-esWNyc3TcIhFul4VjtZH991aZp03BUVgvzCFqt6GtUg=";
+              };
+            };
+            "0.8.5" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.8.5/Cargo.lock
+              lockFile = ./ruff/0.8.5-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.18.0" = "sha256-zjPjuhnOJuBHCwBcmytFcIRZgaO+v3rmzolcqg2grrM=";
+              };
+            };
+            "0.8.4" = {
+              # https://raw.githubusercontent.com/astral-sh/ruff/0.8.4/Cargo.lock
+              lockFile = ./ruff/0.8.4-Cargo.lock;
+              outputHashes = {
+                "lsp-types-0.95.1" = "sha256-8Oh299exWXVi6A39pALOISNfp8XBya8z+KT/Z7suRxQ=";
+                # lock file has a revision override
+                "salsa-0.18.0" = "sha256-zjPjuhnOJuBHCwBcmytFcIRZgaO+v3rmzolcqg2grrM=";
               };
             };
             "0.7.4" = {
