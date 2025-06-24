@@ -586,41 +586,11 @@ lib.composeManyExtensions [
       cryptography =
         let
           getCargoHash = version: {
-            "35.0.0" = "sha256-tQoQfo+TAoqAea86YFxyj/LNQCiViu5ij/3wj7ZnYLI=";
-            "36.0.0" = "sha256-Y6TuW7AryVgSvZ6G8WNoDIvi+0tvx8ZlEYF5qB0jfNk=";
-            "36.0.1" = "sha256-kozYXkqt1Wpqyo9GYCwN08J+zV92ZWFJY/f+rulxmeQ=";
-            "36.0.2" = "1a0ni1a3dbv2dvh6gx2i54z8v5j9m6asqg97kkv7gqb1ivihsbp8";
-            "37.0.2" = "sha256-qvrxvneoBXjP96AnUPyrtfmCnZo+IriHR5HbtWQ5Gk8=";
-            "37.0.4" = "sha256-f8r6QclTwkgK20CNe9i65ZOqvSUeDc4Emv6BFBhh1hI";
-            "38.0.1" = "sha256-o8l13fnfEUvUdDasq3LxSPArozRHKVsZfQg9DNR6M6Q=";
-            "38.0.3" = "sha256-lzHLW1N4hZj+nn08NZiPVM/X+SEcIsuZDjEOy0OOkSc=";
-            "38.0.4" = "sha256-BN0kOblUwgHj5QBf52RY2Jx0nBn03lwoN1O5PEohbwY=";
-            "39.0.0" = "sha256-clorC0NtGukpE3DnZ84MSdGhJN+qC89DZPITZFuL01Q=";
-            "39.0.2" = "sha256-Admz48/GS2t8diz611Ciin1HKQEyMDEwHxTpJ5tZ1ZA=";
-            "40.0.0" = "sha256-/TBANavYria9YrBpMgjtFyqg5feBcloETcYJ8fdBgkI=";
-            "40.0.1" = "sha256-gFfDTc2QWBWHBCycVH1dYlCsWQMVcRZfOBIau+njtDU=";
-            "40.0.2" = "sha256-cV4GTfbVYanElXOVmynvrru2wJuWvnT1Z1tQKXdkbg0=";
-            "41.0.1" = "sha256-38q81vRf8QHR8lFRM2KbH7Ng5nY7nmtWRMoPWS9VO/U=";
-            "41.0.2" = "sha256-hkuoICa/suMXlr4u95JbMlFzi27lJqJRmWnX3nZfzKU=";
-            "41.0.3" = "sha256-LQu7waympGUs+CZun2yDQd2gUUAgyisKBG5mddrfSo0=";
-            "41.0.4" = "sha256-oXR8yBUgiA9BOfkZKBJneKWlpwHB71t/74b/5WpiKmw=";
-            "41.0.5" = "sha256-ABCK144//RUJ3AksFHEgqC+kHvoHl1ifpVuqMTkGNH8=";
-            "41.0.6" = "sha256-E7O0035BnJfTQeZNAN3Oz0fMbfj45htvnK8AHOzfdcY=";
-            "41.0.7" = "sha256-VeZhKisCPDRvmSjGNwCgJJeVj65BZ0Ge+yvXbZw86Rw=";
-            "42.0.1" = "sha256-Kq/TSoI1cm9Pwg5CulNlAADmxdq0oWbgymHeMErUtcE=";
-            "42.0.2" = "sha256-jw/FC5rQO77h6omtBp0Nc2oitkVbNElbkBUduyprTIc=";
-            "42.0.3" = "sha256-QBZLGXdQz2WIBlAJM+yBk1QgmfF4b3G0Y1I5lZmAmtU=";
-            "42.0.4" = "sha256-qaXQiF1xZvv4sNIiR2cb5TfD7oNiYdvUwcm37nh2P2M=";
-            "42.0.5" = "sha256-Pw3ftpcDMfZr/w6US5fnnyPVsFSB9+BuIKazDocYjTU=";
-            "42.0.6" = "sha256-q1nCn82wVfADPMYX2LCq7CpIIbMvFkqsXRYfhzGyvSg=";
-            "42.0.7" = "sha256-wAup/0sI8gYVsxr/vtcA+tNkBT8wxmp68FPbOuro1E4=";
-            "42.0.8" = "sha256-PgxPcFocEhnQyrsNtCN8YHiMptBmk1PUhEDQFdUR1nU=";
-            "43.0.0" = "sha256-TEQy8PrIaZshiBFTqR/OJp3e/bVM1USjcmpDYcjPJPM=";
-            "43.0.1" = "sha256-wiAHM0ucR1X7GunZX8V0Jk2Hsi+dVdGgDKqcYjSdD7Q=";
-            "43.0.3" = "sha256-d3Gt4VrBWk6qowwX0Epp4mc1PbySARVU9YMsHYKImCs=";
-            "44.0.0" = "sha256-LJIY2O8ul36JQmhiW8VhLCQ0BaX+j+HGr3e8RUkZpc8=";
-            "44.0.1" = "sha256-6inZ5HEnQmW5U+H+QG5eRHHdnYYnUQPXNvx6iBGXlOk=";
-            "44.0.2" = "sha256-A3A9IiwcqZGSxpChsWuCquG1DNgiOzayWp43DY3lMXc=";
+            "44.0.3" = "sha256-mino+eLi+KjZLgD5V5mFecwV1A5XVZn8lt41sXZFuL4=";
+            "45.0.1" = "sha256-dKwNnWBzBM9QEcRbbvkNhFJnFxFakqZ/MS7rqE8/tNQ=";
+            "45.0.2" = "sha256-dKwNnWBzBM9QEcRbbvkNhFJnFxFakqZ/MS7rqE8/tNQ=";
+            "45.0.3" = "sha256-dKwNnWBzBM9QEcRbbvkNhFJnFxFakqZ/MS7rqE8/tNQ=";
+            "45.0.4" = "sha256-dKwNnWBzBM9QEcRbbvkNhFJnFxFakqZ/MS7rqE8/tNQ=";
           }.${version} or (
             lib.warn "Unknown cryptography version: '${version}'. Please update getCargoHash." lib.fakeHash
           );
@@ -651,11 +621,11 @@ lib.composeManyExtensions [
               CRYPTOGRAPHY_DONT_BUILD_RUST = "1";
             } // lib.optionalAttrs (lib.versionAtLeast old.version "3.5" && !isWheel) rec {
               cargoDeps =
-                pkgs.rustPlatform.fetchCargoTarball {
+                pkgs.rustPlatform.fetchCargoVendor {
                   inherit (old) src;
                   sourceRoot = "${old.pname}-${old.version}/${cargoRoot}";
                   name = "${old.pname}-${old.version}";
-                  inherit sha256;
+                  hash = sha256;
                 };
               cargoRoot = if lib.versionAtLeast old.version "44" then "." else "src/rust";
             }
