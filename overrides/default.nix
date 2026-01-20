@@ -1719,7 +1719,6 @@ lib.composeManyExtensions [
         in
         {
           buildInputs = old.buildInputs or [ ] ++ [
-            final.types-typed-ast
             final.types-setuptools
           ]
           ++ lib.optionals (lib.versionAtLeast old.version "0.990") [ final.types-psutil ];
