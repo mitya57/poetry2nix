@@ -160,7 +160,7 @@ lib.composeManyExtensions [
       };
 
       build = bootstrappingBase.build.override {
-        inherit (final) buildPythonPackage flit-core packaging pyproject-hooks tomli;
+        inherit (final) buildPythonPackage flit-core packaging pyproject-hooks;
       };
 
       flit-core = bootstrappingBase.flit-core.override {
@@ -176,7 +176,7 @@ lib.composeManyExtensions [
       };
 
       pyproject-hooks = bootstrappingBase.pyproject-hooks.override {
-        inherit (final) buildPythonPackage flit-core tomli;
+        inherit (final) buildPythonPackage flit-core;
       };
 
       wheel = bootstrappingBase.wheel.override {
